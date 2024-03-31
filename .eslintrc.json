@@ -1,0 +1,50 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["@typescript-eslint", "prettier", "import", "react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "@electron-toolkit/eslint-config-ts/recommended",
+    "@electron-toolkit/eslint-config-prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/recommended",
+        "plugin:tailwindcss/recommended",
+        "prettier"
+      ],
+      "rules": {
+        "prettier/prettier": "error",
+        "react/prop-types": "warn",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-use-before-define": "warn",
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "no-underscore-dangle": "off",
+        "no-param-reassign": [2, { "props": false }],
+        "class-methods-use-this": "off",
+        "no-useless-escape": "off",
+        "max-len": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "devDependencies": true }
+        ],
+        "no-restricted-syntax": "off",
+        "max-classes-per-file": "off",
+        "no-continue": "off",
+        "func-names": "off",
+        "no-alert": "off",
+        "no-nested-ternary": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["electron.vite.config.ts"]
+}

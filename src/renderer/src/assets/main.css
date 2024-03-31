@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--base-100);
+}
+
+html,
+body {
+  max-height: 100dvh;
+  height: 100dvh;
+  height: 100vh;
+  overflow: hidden;
+}
